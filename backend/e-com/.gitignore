@@ -6,6 +6,7 @@ target/
 .github/copilot-instructions.md
 
 
+
 ### STS ###
 .apt_generated
 .classpath
@@ -34,3 +35,6 @@ build/
 ### VS Code ###
 .vscode/
 
+
+### secrect  ###
+application-dev.properties

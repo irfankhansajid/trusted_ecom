@@ -1,8 +1,6 @@
 package com.example.escrow.e_com.service;
 
-import java.util.Optional;
-
-import com.example.escrow.e_com.Role;
+import com.example.escrow.e_com.entity.Role;
 import com.example.escrow.e_com.dto.UpdateRequestDTO;
 import com.example.escrow.e_com.dto.UserRegisterRequest;
 import com.example.escrow.e_com.dto.UserResponse;

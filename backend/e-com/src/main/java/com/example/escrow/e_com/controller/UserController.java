@@ -4,15 +4,12 @@ import com.example.escrow.e_com.dto.AuthRequest;
 import com.example.escrow.e_com.dto.UpdateRequestDTO;
 import com.example.escrow.e_com.dto.UserRegisterRequest;
 import com.example.escrow.e_com.dto.UserResponse;
-import com.example.escrow.e_com.entity.User;
 import com.example.escrow.e_com.exception.AlreadyExistsException;
 import com.example.escrow.e_com.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Optional;
 
 @RestController
 @RequestMapping("api/user")

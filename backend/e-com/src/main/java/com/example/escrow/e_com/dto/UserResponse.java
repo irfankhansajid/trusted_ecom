@@ -1,6 +1,6 @@
 package com.example.escrow.e_com.dto;
 
-import com.example.escrow.e_com.Role;
+import com.example.escrow.e_com.entity.Role;
 import lombok.Data;
 
 @Data

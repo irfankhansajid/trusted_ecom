@@ -1,7 +1,6 @@
 package com.example.escrow.e_com.dto;
 
-import com.example.escrow.e_com.Role;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.example.escrow.e_com.entity.Role;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

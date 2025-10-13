@@ -1,4 +1,4 @@
-package com.example.escrow.e_com;
+package com.example.escrow.e_com.entity;
 
 public enum Role {
 
