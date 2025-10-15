@@ -38,3 +38,5 @@ build/
 
 ### secrect  ###
 application-dev.properties
+
+src/main/resources/application-dev.properties

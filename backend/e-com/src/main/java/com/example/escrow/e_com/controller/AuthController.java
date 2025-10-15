@@ -1,12 +1,8 @@
 package com.example.escrow.e_com.controller;
 
 import com.example.escrow.e_com.dto.AuthRequest;
-import com.example.escrow.e_com.security.JwtUtil;
-import com.example.escrow.e_com.service.serviceImpl.UserDetailsServiceImpl;
+import com.example.escrow.e_com.service.AuthService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,27 +14,17 @@ import java.util.Map;
 @RequestMapping("/api/auth")
 public class AuthController {
 
-    private final AuthenticationManager authenticationManager;
-    private final UserDetailsServiceImpl userDetailsService;
-    private final JwtUtil jwtUtil;
+    private final AuthService authService;
 
-    public AuthController(AuthenticationManager authenticationManager,
-                          UserDetailsServiceImpl userDetailsService,
-                          JwtUtil jwtUtil) {
-        this.authenticationManager = authenticationManager;
-        this.userDetailsService = userDetailsService;
-        this.jwtUtil = jwtUtil;
+    public AuthController(AuthService authService) {
+        this.authService = authService;
     }
 
     @PostMapping("/login")
     public ResponseEntity<Map<String, String>> login(@RequestBody AuthRequest request) {
-        authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword())
-        );
 
-        final UserDetails user = userDetailsService.loadUserByUsername(request.getEmail());
-        final String jwt = jwtUtil.generateToken(user);
+        String token = authService.login(request.getEmail(), request.getPassword());
 
-        return ResponseEntity.ok(Map.of("token", jwt));
+        return ResponseEntity.ok(Map.of("token", token));
     }
 }
