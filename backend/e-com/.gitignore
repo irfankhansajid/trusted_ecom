@@ -5,6 +5,8 @@ target/
 !**/src/test/**/target/
 .github/copilot-instructions.md
 
+.github/
+
 
 
 ### STS ###
@@ -36,7 +38,10 @@ build/
 .vscode/
 
 
+<<<<<<< HEAD
 ### secrect  ###
 application-dev.properties
 
 src/main/resources/application-dev.properties
+=======
+>>>>>>> c677947 (Fix: Fixing some api issue such as update and delete and security)

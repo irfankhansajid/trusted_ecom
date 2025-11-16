@@ -15,6 +15,5 @@ public class UpdateRequestDTO {
     private String email;
 
     @Size(min = 6, message = "Password must be at least 6 characters")
-    @NotBlank
     private String password;
 }

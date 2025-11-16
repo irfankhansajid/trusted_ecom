@@ -22,6 +22,7 @@ public class JwtUtil {
     private final Key SECRET_KEY = Keys.secretKeyFor(SignatureAlgorithm.HS256);
     private static final long expirationTime = 1000 * 60 * 60;
 
+
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
     }
