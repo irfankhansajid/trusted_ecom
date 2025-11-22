@@ -105,8 +105,5 @@ Reviews: `POST /reviews`, `GET /products/:id/reviews`
 - Local-first: tailored for Bangladesh
 - Scalable SaaS: future brands can self-serve
 
-<<<<<<< HEAD
 ---
 For project-based learning, build one feature/service at a time. Reference backend structure in `backend/e-com`, main class in `src/main/java/com/example/escrow/e_com/EComApplication.java`, and config in `src/main/resources/application.properties`. Use provided API endpoints and workflows as starting points.
-=======
->>>>>>> c677947 (Fix: Fixing some api issue such as update and delete and security)

@@ -1,8 +1,6 @@
 
-<<<<<<< HEAD
 src/main/resources/application-dev.properties
-=======
 # IDE files
 .idea/
 
->>>>>>> c677947 (Fix: Fixing some api issue such as update and delete and security)
+.github/copilot-instructions.md
